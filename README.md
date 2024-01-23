@@ -25,4 +25,4 @@ Journey to Paradise! is a choose your own adventure game that leads to fun or tr
 - **Service** - Login, get high scores, and get your high score
 - **Database/Login** - Save login information and amount of times reached paradise (high scores)
 - **WebSocket**- Message appears when any player reaches the end of the game
-- **React** - Used for the web framework
+- **React** - Use for the web framework
