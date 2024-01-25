@@ -5,3 +5,5 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - Command to remote shell into server: ssh -i [key pair file] ubuntu@[ip address]
 - keep pair secret, keep pair safe
 - brings you to console window for the web server you just launched and in ubuntu user's home directory
+
+- the * can be put in the subdomain so that anything.yourdomain will bring up your website
