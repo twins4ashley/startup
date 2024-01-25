@@ -8,6 +8,8 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 
 - the * can be put in the subdomain so that anything.yourdomain will bring up your website
 - domain name journey2paradise.click
+
+- 
 **Caddy**
 -   handles all creation and rotation web certificates, allows easy set up HTTPS
 -   serves up all your HTML, CSS, JavaScript files, all early application work hosted on static files
