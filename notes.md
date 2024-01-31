@@ -98,3 +98,27 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - svg	- Scalable vector graphic content
   - iframe -	Inline frame of another HTML page
 - Special characters need to use entity syntax (& is &amp;) (< is &lt;)
+- The _img_, _audio_, and _video_ elements are all simple references to an external file, but _svg_ and _canvas_ both contain the code to render a visual image that can even be animated.
+- external media
+- Image example: <img alt="description" src="link" />
+- To include an audio file in your content you use the audio element and specify the src attribute with the URL to the source audio file. You can include the controls attribute if you want the user to be able to control the audio playback. If you do not display the controls then there is no visual representation of the audio in the rendered page. The autoplay attribute starts the audio playing as soon as the audio file is loaded, and the loop attribute keeps it playing over and over.
+  - Audio example: <audio controls src="audiomp3"></audio>
+- To include a video in your content you use the video element and specify the src attribute with the URL to the source video. Like the audio element you can include the controls or autoplay attributes. Note that you may need to include the crossorigin="anonymous" attribute if you are requesting files from a different domain than the one serving your content.
+  - Example video: <video controls width="300" crossorigin="anonymous">
+                 <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
+                  </video>
+- SVG is an extremely powerful and widely supported way to render graphics inline in your HTML. An example SVG graphic that draws a black border and a red circle looks like this:
+  - <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="red" style="border: 1px solid #000000">
+    <circle cx="150" cy="100" r="50" />
+    </svg>
+- The canvas element was introduced to HTML in order to facilitate 2D drawing and animation. The HTML for the canvas element is fairly simple, but actually drawing on the canvas requires JavaScript support. Here again, is our simple red dot example.
+  - <canvas id="canvasDemo" width="300" height="200" style="border: 1px solid #000000"></canvas>
+<script>
+  const ctx = document.getElementById('canvasDemo').getContext('2d');
+  ctx.beginPath();
+  ctx.arc(150, 100, 50, 0, 2 * Math.PI);
+  ctx.fillStyle = 'red';
+  ctx.strokeStyle = 'red';
+  ctx.fill();
+  ctx.stroke();
+</script>
