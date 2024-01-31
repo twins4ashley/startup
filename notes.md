@@ -100,9 +100,9 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - Special characters need to use entity syntax (& is &amp;) (< is &lt;)
 - The _img_, _audio_, and _video_ elements are all simple references to an external file, but _svg_ and _canvas_ both contain the code to render a visual image that can even be animated.
 - external media
-- Image example: <img alt="description" src="link" />
+- Image example: <img alt=description src= />
 - To include an audio file in your content you use the audio element and specify the src attribute with the URL to the source audio file. You can include the controls attribute if you want the user to be able to control the audio playback. If you do not display the controls then there is no visual representation of the audio in the rendered page. The autoplay attribute starts the audio playing as soon as the audio file is loaded, and the loop attribute keeps it playing over and over.
-  - Audio example: <audio controls src="audiomp3"></audio>
+  - Audio example: <audio controls src=></audio>
 - To include a video in your content you use the video element and specify the src attribute with the URL to the source video. Like the audio element you can include the controls or autoplay attributes. Note that you may need to include the crossorigin="anonymous" attribute if you are requesting files from a different domain than the one serving your content.
   - Example video: <video controls width="300" crossorigin="anonymous">
                  <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
