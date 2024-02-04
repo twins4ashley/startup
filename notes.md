@@ -122,3 +122,9 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   ctx.fill();
   ctx.stroke();
 </script>
+**Notes** (HTML)
+- to deploy files go to console in project directory that you're working on then use: ./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s simon
+- to deploy the startup use ./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup
+- make sure you have saved in each file before deploying or changes won't be seen
+- must have index.html cause is default browser will upload
+- 
