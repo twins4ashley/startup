@@ -28,7 +28,7 @@ Journey to Paradise! is a choose your own adventure game that leads to fun or tr
 - **React** - Use for the web framework
 
 ## HTML deliverable
-- **HTML pages for each component of your application** - __ HTML pages: 1 to login, 1 to see top scores and realtime data, __ to choose your own adventure
+- **HTML pages for each component of your application** - 17 HTML pages: 1 to login, 1 to see top scores and realtime data, 15 to choose your own adventure
 - **Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER** - nav, header, footer same for each page, main changed for each HTML page
 - **Links between pages as necessary** - each page header can go login/start game/top scores, login leads to start of the game, game choice leads to HTML pages in adventure, end of game choose go start of game or top scores
 - **Application textual content** - game gives description of where you are in your journey then lets you choose what you want to do next
