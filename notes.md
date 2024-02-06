@@ -1,3 +1,4 @@
+https://startup.journey2paradise.click/index.html
 GitHub is useful for saving work and seeing changes, if your computer dies the work is still in GitHub! Commit often!!!
 # Notes
 - IP 18.207.56.180
