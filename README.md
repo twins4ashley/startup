@@ -33,7 +33,7 @@ Journey to Paradise! is a choose your own adventure game that leads to fun or tr
 - **Links between pages as necessary** - each page header can go login/start game/top scores, login leads to start of the game, game choice leads to HTML pages in adventure, end of game choose go start of game or top scores
 - **Application textual content** - game gives description of where you are in your journey then lets you choose what you want to do next
 - **Placeholder for 3rd party service calls** - weather on start HTML page
-- **Application images** - Disneyland image on 1121 HTML page
+- **Application images** - Disneyland image on 1121 HTML page, palm tree on top (ico)
 - **Login placeholder, including user name display** - input box for username and password to submit or create account for login, username displayed on game pages
 - **Database data placeholder showing content stored in the database** - player's number of times reached paradise saved and displayed, top players on top scores HTML page
 - **WebSocket data placeholder showing where realtime communication will go** - realtime data of outcome of journey displayed on top scores HTML page
