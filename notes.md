@@ -124,8 +124,17 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   ctx.stroke();
 </script>
 **Notes** (HTML)
-- to deploy files go to console in project directory that you're working on then use: ./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s simon
-- to deploy the startup use ./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup
+- to deploy files go to console in project directory that you're working on then use: ./deployFiles.sh -k < yourpemkey> -h < yourdomain> -s simon
+- to deploy the startup use ./deployFiles.sh -k < yourpemkey> -h < yourdomain> -s startup
 - make sure you have saved in each file before deploying or changes won't be seen
 - must have index.html cause is default browser will upload
+
+## CSS
+- padding, border, margin
+**CSS Frameworks**
+- Tailwind - uses smaller definitions applied specifically to individual HTML elements, moves much of the CSS representation out of CSS file and directly into HTML
+- can integrate Bootstrap into web applications simply by referencing Bootstrap CSS files from their content delivery network (CDN), then add the HTML link elements to your element like this... 
+- if going use Bootstrap compnents that require JavaScript, will need also include Bootstrap's JavaScript module, add this by putting following at end of HTML body elements ... 
+- use Bootstrap _btn_ CSS class button gets nice looking rounded appearance, _btn-primary_ shades button with current primary color for application (default blue)
+  - < button type = " button" class = " btn btn-primary">
 - 
