@@ -128,6 +128,10 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - to deploy the startup use ./deployFiles.sh -k < yourpemkey> -h < yourdomain> -s startup
 - make sure you have saved in each file before deploying or changes won't be seen
 - must have index.html cause is default browser will upload
+- Span vs Div
+  - Span - inline-level element, used for grouping small chunks of text, must not be nested to avoid confusion
+  - Div - block-level element, used for grouping large chunks of text together, usually nested
+  - use span when want style particular part content differently or manipulate with JavaScript
 
 ## CSS
 - padding, border, margin
@@ -137,4 +141,5 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - if going use Bootstrap compnents that require JavaScript, will need also include Bootstrap's JavaScript module, add this by putting following at end of HTML body elements ... 
 - use Bootstrap _btn_ CSS class button gets nice looking rounded appearance, _btn-primary_ shades button with current primary color for application (default blue)
   - < button type = " button" class = " btn btn-primary">
+- Bootstrap: https://getbootstrap.com/docs/5.2/getting-started/introduction/
 - 
