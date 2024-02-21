@@ -105,16 +105,16 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - To include an audio file in your content you use the audio element and specify the src attribute with the URL to the source audio file. You can include the controls attribute if you want the user to be able to control the audio playback. If you do not display the controls then there is no visual representation of the audio in the rendered page. The autoplay attribute starts the audio playing as soon as the audio file is loaded, and the loop attribute keeps it playing over and over.
   - Audio example: <audio controls src=></audio>
 - To include a video in your content you use the video element and specify the src attribute with the URL to the source video. Like the audio element you can include the controls or autoplay attributes. Note that you may need to include the crossorigin="anonymous" attribute if you are requesting files from a different domain than the one serving your content.
-  - Example video: <video controls width="300" crossorigin="anonymous">
-                 <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
-                  </video>
+  - Example video: < video controls width="300" crossorigin="anonymous">
+                 < source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
+                  < /video>
 - SVG is an extremely powerful and widely supported way to render graphics inline in your HTML. An example SVG graphic that draws a black border and a red circle looks like this:
-  - <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="red" style="border: 1px solid #000000">
-    <circle cx="150" cy="100" r="50" />
-    </svg>
+  - < svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="red" style="border: 1px solid #000000">
+    < circle cx="150" cy="100" r="50" />
+    </ svg>
 - The canvas element was introduced to HTML in order to facilitate 2D drawing and animation. The HTML for the canvas element is fairly simple, but actually drawing on the canvas requires JavaScript support. Here again, is our simple red dot example.
-  - <canvas id="canvasDemo" width="300" height="200" style="border: 1px solid #000000"></canvas>
-<script>
+  - < canvas id="canvasDemo" width="300" height="200" style="border: 1px solid #000000"></ canvas>
+< script>
   const ctx = document.getElementById('canvasDemo').getContext('2d');
   ctx.beginPath();
   ctx.arc(150, 100, 50, 0, 2 * Math.PI);
@@ -122,7 +122,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   ctx.strokeStyle = 'red';
   ctx.fill();
   ctx.stroke();
-</script>
+</ script>
 **Notes** (HTML)
 - to deploy files go to console in project directory that you're working on then use: ./deployFiles.sh -k < yourpemkey> -h < yourdomain> -s simon
 - to deploy the startup use ./deployFiles.sh -k < yourpemkey> -h < yourdomain> -s startup
@@ -148,6 +148,58 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - next border, properties like color, thickness, and line style
   - final box is margin, considered external to actual styling of box and therefore only represents whitespace
   - by default width and height element defined by width and height content box, change _box-sizing_ CSS property from default value _content-box_ to _border-box_ order redefine width and height to also include padding and border (makes easier style elements when visual size matches actual size)
+**CSS Selectors**
+- descendant - list of descendants - _body section_ - any section descendant of a body
+- child - list of direct children - _section > p_ - any p that direct child of a section
+- general sibling - list of siblings - _div ~ p_ - any p has div sibling 
+- adjacent sibling - list of adjacent sibling - _div + p_ - any p has adjacent div sibling
+- class selector supply class name prefixed with period or combine element name and class selector
+- ID selector, all IDs should be unique within HTML document so select targets specific element, use by prefix ID with hash symbol (#)
+- attribute selectors allow select elements based upon attributes, a[href ] or more specific a[ href="./fish.png] or support wildcards specific text p[ href*="https://"]
+- pseduo selector which select based on positional relationships, mouse interactions, hyperlink visitation states, and attributes
+**CSS Declarations**
+- background-color	color	red	Fill the background color
+- border	color width style	#fad solid medium	Sets the border using shorthand where any or all of the values may be provided
+- border-radius	unit	50%	The size of the border radius
+- box-shadow	x-offset y-offset blu-radius color	2px 2px 2px gray	Creates a shadow
+- columns	number	3	Number of textual columns
+- column-rule	color width style	solid thin black	Sets the border used between columns using border shorthand
+- color	color	rgb(128, 0, 0)	Sets the text color
+- cursor	type	grab	Sets the cursor to display when hovering over the element
+- display	type	none	Defines how to display the element and its children
+- filter	filter-function	grayscale(30%)	Applies a visual filter
+- float	direction	right	Places the element to the left or right in the flow
+- flex			Flex layout. Used for responsive design
+- font	family size style	Arial 1.2em bold	Defines the text font using shorthand
+- grid			Grid layout. Used for responsive design
+- height	unit	.25em	Sets the height of the box
+- margin	unit	5px 5px 0 0	Sets the margin spacing
+- max-[ width/height]	unit	20%	Restricts the width or height to no more than the unit
+- min-[ width/height]	unit	10vh	Restricts the width or height to no less than the unit
+- opacity	number	.9	Sets how opaque the element is
+- overflow	[ visible/hidden/scroll/auto]	scroll	Defines what happens when the content does not fix in its box
+- position	[ static/relative/absolute/sticky]	absolute	Defines how the element is positioned in the document
+- padding	unit	1em 2em	Sets the padding spacing
+- left	unit	10rem	The horizontal value of a positioned element
+- text-align	[ start/end/center/justify]	end	Defines how the text is aligned in the element
+- top	unit	50px	The vertical value of a positioned element
+- transform	transform-function	rotate(0.5turn)	Applies a transformation to the element
+- width	unit	25vmin	Sets the width of the box
+- z-index	number	100	Controls the positioning of the element on the z axis
+- units
+  - px	The number of pixels
+  - pt	The number of points (1/72 of an inch)
+  - in	The number of inches
+  - cm	The number of centimeters
+  - %	A percentage of the parent element
+  - em	A multiplier of the width of the letter m in the parent's font
+  - rem	A multiplier of the width of the letter m in the root's font
+  - ex	A multiplier of the height of the element's font
+  - vw	A percentage of the viewport's width
+  - vh	A percentage of the viewport's height
+  - vmin	A percentage of the viewport's smaller dimension
+  - vmax	A percentage of the viewport's larger dimension
+- color: keyword, RGB hex, RGB function, HSL
 **CSS Frameworks**
 - Tailwind - uses smaller definitions applied specifically to individual HTML elements, moves much of the CSS representation out of CSS file and directly into HTML
 - can integrate Bootstrap into web applications simply by referencing Bootstrap CSS files from their content delivery network (CDN), then add the HTML link elements to your element like this... 
