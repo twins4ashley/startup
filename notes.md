@@ -133,8 +133,21 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - Div - block-level element, used for grouping large chunks of text together, usually nested
   - use span when want style particular part content differently or manipulate with JavaScript
 
-## CSS
+## CSS (Cascading Style Sheets)
 - padding, border, margin
+- with CSS programmer can animate page, deploy custom fonts, respond to user actions, and dynamically alter entire layout of page based on size of device and its orientation
+- CSS primarily concerned defining _rulesets_ (_rules_), comprised a _selector_ that selects elements to apply rule to (ex. p {...}), and one or more _declarations_ that represent _property_ (ex. color) to style with given _property value_ (ex. color)
+- three ways associate CSS with HTML
+  - use _style_ attribute of HTML element and explicitly assign one or more declarations (< p style=color...>) 
+  - use HTML _style_ element to define CSS rules within HTML document appear in _head_ element of document so rules apply all elements of document (< head > < style > p{...} // < body >) 
+  - use HTML _link_ element to create hyperlink reference to external file containing CSS rules must appear in _head_ element of document (< link rel = stylsheets href = styles.css>) (_link_ usually preferred)
+- any declaration defined at lower level will override higher declaration
+- CSS defines everything as boxes
+  - innermost box holds element's content, where text or image displayed
+  - next padding, padding inherit things like background color
+  - next border, properties like color, thickness, and line style
+  - final box is margin, considered external to actual styling of box and therefore only represents whitespace
+  - by default width and height element defined by width and height content box, change _box-sizing_ CSS property from default value _content-box_ to _border-box_ order redefine width and height to also include padding and border (makes easier style elements when visual size matches actual size)
 **CSS Frameworks**
 - Tailwind - uses smaller definitions applied specifically to individual HTML elements, moves much of the CSS representation out of CSS file and directly into HTML
 - can integrate Bootstrap into web applications simply by referencing Bootstrap CSS files from their content delivery network (CDN), then add the HTML link elements to your element like this... 
