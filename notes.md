@@ -200,6 +200,10 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - vmin	A percentage of the viewport's smaller dimension
   - vmax	A percentage of the viewport's larger dimension
 - color: keyword, RGB hex, RGB function, HSL
+**CSS Fonts**
+- four major families of fonts: serif, sans-serif, fixed, and symbol
+- in order have browser load font use @font-face rule and provide font name and source location
+- easiest way use Google fonts use CSS import statement to reference Google Font Service, will automatically generate CSS for importing files
 **CSS Frameworks**
 - Tailwind - uses smaller definitions applied specifically to individual HTML elements, moves much of the CSS representation out of CSS file and directly into HTML
 - can integrate Bootstrap into web applications simply by referencing Bootstrap CSS files from their content delivery network (CDN), then add the HTML link elements to your element like this... 
