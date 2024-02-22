@@ -204,6 +204,39 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - four major families of fonts: serif, sans-serif, fixed, and symbol
 - in order have browser load font use @font-face rule and provide font name and source location
 - easiest way use Google fonts use CSS import statement to reference Google Font Service, will automatically generate CSS for importing files
+**CSS Animation**
+- use _animation_ properties and define _keyframes_ for what element should look like at different times in animation
+**Responsive Design**
+- ability configure interface so application accommodates and takes advantage of screen's size and orientation
+- display property 
+  - none	Don't display this element. The element still exists, but the browser will not render it.
+  - block	Display this element with a width that fills its parent element. A p or div element has block display by default.
+  - inline	Display this element with a width that is only as big as its content. A b or span element has inline display by default.
+  - flex	Display this element's children in a flexible orientation.
+  - grid	Display this element's children in a grid orientation.
+- meta tag in _head_ element of all HTML pages, tells browser not scale page
+- float moves an element to left or right of its container element and allows inline elements to wrap around it
+- @media selector dynamically detects size and orientation of a device and applies CSS rules to represent structure of HTML in way accommodates change
+  - can use tell which side screen longest
+  - can make entire pieces of your application disapper or move different location
+**CSS Grid**
+- .container (container is a class) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  grid-gap: 1em;
+}
+**CSS Flexbox**
+- useful when want partition your application into areas that responsively move around as window resizes or orientation changes
+- body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+}
+- flex: 0 80px zero means will not grow, 80px means has starting basis height 80 pixels, creates fized size box
+- flex: 1 one means will get one fractional unit of growth
+- can change medi query to none if screen gets to small (ex. don't show header and footer only main if screen small)
 **CSS Frameworks**
 - Tailwind - uses smaller definitions applied specifically to individual HTML elements, moves much of the CSS representation out of CSS file and directly into HTML
 - can integrate Bootstrap into web applications simply by referencing Bootstrap CSS files from their content delivery network (CDN), then add the HTML link elements to your element like this... 
