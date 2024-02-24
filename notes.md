@@ -272,5 +272,24 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - common operators - ===(equality in math), for string variables + (concatenation) and === (equality)
 - variable has type, but variable can change type when assigned new value or types automatically converted based upon context used in
   - 2 + '3'; // OUTPUT: '23'...2 * '3'; // OUTPUT: 6...[2] + [3]; // OUTPUT: '23'...true + null; // OUTPUT: 1...true + undefined; // OUTPUT: NaN
-
+- === strict equality (!== strict inequality)
+  - 1 === '1'; OUTPUT: false but 1 == '1'; OUTPUT: true
+- loops
+  - for
+  - do while ... let i = 0; do { console.log(i); i++; } while (i < 2); // OUTPUT: 0 1
+  - while
+  - for in ... const obj = { a: 1, b: 'fish' }; for (const name in obj) {console.log(name);} // OUTPUT: a // OUTPUT: b
+  - for of - iterates over an iterable's (array, map, set) property values
+  - allow for either a _break_ or _continue_ statement to abort or advance the loop
+**JavaScript string**
+- single quotes, double quotes, or backticks (`)
+- backtick defines string literal may contain JS that is evaluated in place and concatenated into the string
+- string literal replacement specifier declared with dollar sign followed by curly brace pair, anything inside {} evaluated as JS
+- string functions
+  - length	The number of characters in the string
+  - indexOf()	The starting index of a given substring
+  - split()	Split the string into an array on the given delimiter string
+  - startsWith()	True if the string has a given prefix
+  - endsWith()	True if the string has a given suffix
+  - toLowerCase()	Converts all characters to lowercase
 
