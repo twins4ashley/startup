@@ -63,7 +63,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - _CTRL-R_ - Use type ahead to find previous commands
 - _CTRL-C_ - Kill the currently running command
 
-**Hyertext Markup Language (HTML)**
+## Hyertext Markup Language (HTML)
 - element -	meaning
   - html -	The page container
   - head -	Header information
@@ -244,4 +244,33 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - use Bootstrap _btn_ CSS class button gets nice looking rounded appearance, _btn-primary_ shades button with current primary color for application (default blue)
   - < button type = " button" class = " btn btn-primary">
 - Bootstrap: https://getbootstrap.com/docs/5.2/getting-started/introduction/
-- 
+
+## JavaScript
+- built in function _console.log_ output string to debugger console
+- end JavaScript statements with semicolon and code blocks defined with curly braces
+- see how long piece code running can wrap with _time_ and _timeEnd_ calls (output duration)
+- see how many times block code called use _count_ function
+- adding JavaScript to HTML
+  - can insert JavaScript into HTML by directly including it in HTML content of a _< script>_ element, or by using _src_ attribute of script element to reference an external javascript file
+**JavaScript type and construct**
+- variables declared using either _let_ or _const_ keyword (let allows change value of variable, const will give error if try change)
+- primitive types
+  - Null	The type of a variable that has not been assigned a value.
+  - Undefined	The type of a variable that has not been defined.
+  - Boolean	true or false.
+  - Number	A 64-bit signed number.
+  - BigInt	A number of arbitrary magnitude.
+  - String	A textual sequence of characters.
+  - Symbol	A unique value.
+- object types
+  - Object	A collection of properties represented by name-value pairs. Values can be of any type.	{a:3, b:'fish'}
+  - Function	An object that has the ability to be called.	function a() {}
+  - Date	Calendar dates and times.	new Date('1995-12-17')
+  - Array	An ordered sequence of any type.	[3, 'fish']
+  - Map	A collection of key-value pairs that support efficient lookups.	new Map()
+  - JSON	A lightweight data-interchange format used to share information across programs.	{"a":3, "b":"fish"}
+- common operators - ===(equality in math), for string variables + (concatenation) and === (equality)
+- variable has type, but variable can change type when assigned new value or types automatically converted based upon context used in
+  - 2 + '3'; // OUTPUT: '23'...2 * '3'; // OUTPUT: 6...[2] + [3]; // OUTPUT: '23'...true + null; // OUTPUT: 1...true + undefined; // OUTPUT: NaN
+
+
