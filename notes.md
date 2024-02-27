@@ -292,4 +292,113 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - startsWith()	True if the string has a given prefix
   - endsWith()	True if the string has a given suffix
   - toLowerCase()	Converts all characters to lowercase
-
+**Functions**
+- can be assigned name, passed as parameter, returned as result, and referenced from an object like any other variable
+- if parameter not provided then value of parameter is _undefined_ when function executes
+- function can define default value, assinging value to parameter in function declaration
+- anonymous functions - functions commonly assigned to variable so can be passed as parameter to some other function or stored as object property, can define function anonymously and assign to a variable
+- creating, passing, and returning functions
+- functions can be declared inside other functions, allows you modularize code without always exposing private details
+**JavaScript arrow function**
+- make code more compact, syntax replaces need for _function_ keyword with symbols _=>_ placed after parameter declaration
+- arrow functions cannot be used for constructors or iterator generators
+- no curly braces, result of expression automatically returned
+- curly braces, if don't put return _____ then will return undefined
+- arrow functions inherit _this_ pointer from scope where it is created, makes _closure_ allows function continue referencing its creation scope even after passed out of that scope
+  - can remember values of variables when function created instead what they are when are executed
+- _debounce_ function only execute specified function once within given time window, any requests execute debounce function more frequently cause time window reset
+**JavaScript array**
+- array objects represent sequence other objects and primitives
+- push	Add an item to the end of the array	a.push(4)
+- pop	Remove an item from the end of the array	x = a.pop()
+- slice	Return a sub-array	a.slice(1,-1)
+- sort	Run a function to sort an array in place	a.sort((a,b) => b-a)
+- values	Creates an iterator for use with a for of loop	for (i of a.values()) {...}
+- find	Find the first item satisfied by a test function	a.find(i => i < 2)
+- forEach	Run a function on each array item	a.forEach(console.log)
+- reduce	Run a function to reduce each array item to a single item	a.reduce((a, c) => a + c)
+- map	Run a function to map an array to a new array	a.map(i => i+i)
+- filter	Run a function to remove items	a.filter(i => i%2)
+- every	Run a function to test if all items match	a.every(i => i < 3)
+- some	Run a function to test if any items match	a.some(i => 1 < 1)
+**JSON**
+- JavaScript Object Notation
+- provide simple, effective way share and store data
+- easily convertible to and from JavaScript objects
+- most common JSON document contains object ({"a":1,"b":"words"})
+- can convert JSON to, and from, JS using _JSON.parse_ and _JSON.stringify_
+- JSON cannot represent JS undefined object so gets dropped when converting from JS to JSON
+**JavaScript object and classes**
+- objects have common object-oriented functionality such as constructors, a _this_ pointer, static properties and functions, and inheritance
+- preperties of object can be referenced either with dot (_obj.prop) or bracket notation (obj[' prop'])
+- declare variable of object type with _object-literal_ syntax, provide initial composition of object
+- static functions associated with
+  - entries	Returns an array of key value pairs
+  - keys	Returns an array of keys
+  - values	Returns an array of values
+- any function that returns object is considered a _constructor_ and can be invoked with _new_ operator
+- _this_ depends of scope, in context object refers to a pointer to the object
+- can use classes to define objects
+- using class clarifies intent create reusable component rater than one-off object
+- classes have explicit constructor and assumed function declarations
+- can make properties and functions of classes private by prefixing with a _#_
+- classes can be extended using _extends_ keyword to define inheritance
+  - parameters that need be passed parent class delivered using _super_ function
+  - parent's function explicitly accessed using _super_ keyword
+**JavaScript regular expressions**
+- match, replace, search, split, test (see if match)
+**JavaScript rest and spread**
+- call with any number of parameters and all automatically combined into an array use _rest_ parameter by prefix with three periods
+- spread opposite of rest, take object iterable (array or string) and expands into function's parameters
+**JavaScript exceptions**
+- try {
+  // normal execution code
+} catch (err) {
+  // exception handling code
+} finally {
+  // always called code
+}
+**JavaScript destructuring**
+- process pulling individual items out of an existing one, or removing structure
+- arrays or objects
+- rest syntax ...others
+- destructuring objects explicitly specify properties want pull from source object
+- can map names to new variables instead using original property names
+- default values may be provided for missing ones
+- can use to reassign existing variables
+**Scope**
+- types scope
+  - global - visible to all code
+  - module - visible to all code running in a module
+  - function - visible within a function
+  - block - visible within a block of code delimited by curly braces
+- var ignores block scope
+- _this_ represents variable that point object that contains context within scope of currently executing line of code
+  - Global - When this is referenced outside a function or object it refers to the globalThis object. The globalThis object represents the context for runtime environment. For example, when running in a browser, globalThis refers to the browser's window object.
+  - Function - When this is referenced in a function it refers to the object that owns the function. That is either an object you defined or globalThis if the function is defined outside of an object. Note that when running in JavaScript strict mode, a global function's this variable is undefined instead of globalThis.
+  - Object - When this is referenced in an object it refers to the object.
+- closure defined function and surrounding state
+- whatever variables accessible when function created available inside function
+**JavaScript modules**
+- must explicitly _export_ objects from one file and then _import_ into another file
+**Document Object Model**
+**Local Storage**
+**Promises**
+- long running, or blocking tasks, should be executed with use of JS _Promise_
+- allows main rendering thread continue while some action executed in background
+- different states
+  - pending - currently running asynchronously
+  - fulfilled - completed successfully
+  - rejected - failed to complete
+- _setTimeout_ function create delay in execution of code
+- set state _fulfilled_ when things complete correctly or _rejected_ when error happens
+- promise executer function takes two functions as parameters, _resolve_ and _reject_
+- has three functions: then, catch, and finally
+  - then called if promise fulfilled
+  - catch called if promise rejected
+  - finally always called after all processing completed
+**JavaScript Async/await**
+- _await_ keyword wraps execution of promise and removed need to chain functions, will block until promise state moves to fulfilled or throw exception if state moves rejected
+- cannot call await unless called at top level of JS, or in function defined with _async_ keyword
+- _async_ keyword transforms function so returns promise that will resolve to value that was previously returned by function, basically turns any function into asynchronous function so can in turn make asynchronous requests
+- _async_ keyword declares function returns a promise, _await_ keyword wraps call to _async_ function blocks execution until promise resolved then returns result of promise
