@@ -148,7 +148,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - next border, properties like color, thickness, and line style
   - final box is margin, considered external to actual styling of box and therefore only represents whitespace
   - by default width and height element defined by width and height content box, change _box-sizing_ CSS property from default value _content-box_ to _border-box_ order redefine width and height to also include padding and border (makes easier style elements when visual size matches actual size)
-**CSS Selectors**
+### CSS Selectors
 - descendant - list of descendants - _body section_ - any section descendant of a body
 - child - list of direct children - _section > p_ - any p that direct child of a section
 - general sibling - list of siblings - _div ~ p_ - any p has div sibling 
@@ -157,7 +157,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - ID selector, all IDs should be unique within HTML document so select targets specific element, use by prefix ID with hash symbol (#)
 - attribute selectors allow select elements based upon attributes, a[href ] or more specific a[ href="./fish.png] or support wildcards specific text p[ href*="https://"]
 - pseduo selector which select based on positional relationships, mouse interactions, hyperlink visitation states, and attributes
-**CSS Declarations**
+### CSS Declarations
 - background-color	color	red	Fill the background color
 - border	color width style	#fad solid medium	Sets the border using shorthand where any or all of the values may be provided
 - border-radius	unit	50%	The size of the border radius
@@ -200,13 +200,13 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - vmin	A percentage of the viewport's smaller dimension
   - vmax	A percentage of the viewport's larger dimension
 - color: keyword, RGB hex, RGB function, HSL
-**CSS Fonts**
+### CSS Fonts
 - four major families of fonts: serif, sans-serif, fixed, and symbol
 - in order have browser load font use @font-face rule and provide font name and source location
 - easiest way use Google fonts use CSS import statement to reference Google Font Service, will automatically generate CSS for importing files
-**CSS Animation**
+### CSS Animation
 - use _animation_ properties and define _keyframes_ for what element should look like at different times in animation
-**Responsive Design**
+### Responsive Design
 - ability configure interface so application accommodates and takes advantage of screen's size and orientation
 - display property 
   - none	Don't display this element. The element still exists, but the browser will not render it.
@@ -219,14 +219,14 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - @media selector dynamically detects size and orientation of a device and applies CSS rules to represent structure of HTML in way accommodates change
   - can use tell which side screen longest
   - can make entire pieces of your application disapper or move different location
-**CSS Grid**
+### CSS Grid
 - .container (container is a class) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: 300px;
   grid-gap: 1em;
 }
-**CSS Flexbox**
+### CSS Flexbox
 - useful when want partition your application into areas that responsively move around as window resizes or orientation changes
 - body {
   display: flex;
@@ -237,7 +237,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - flex: 0 80px zero means will not grow, 80px means has starting basis height 80 pixels, creates fized size box
 - flex: 1 one means will get one fractional unit of growth
 - can change medi query to none if screen gets to small (ex. don't show header and footer only main if screen small)
-**CSS Frameworks**
+### CSS Frameworks
 - Tailwind - uses smaller definitions applied specifically to individual HTML elements, moves much of the CSS representation out of CSS file and directly into HTML
 - can integrate Bootstrap into web applications simply by referencing Bootstrap CSS files from their content delivery network (CDN), then add the HTML link elements to your element like this... 
 - if going use Bootstrap compnents that require JavaScript, will need also include Bootstrap's JavaScript module, add this by putting following at end of HTML body elements ... 
@@ -252,7 +252,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - see how many times block code called use _count_ function
 - adding JavaScript to HTML
   - can insert JavaScript into HTML by directly including it in HTML content of a _< script>_ element, or by using _src_ attribute of script element to reference an external javascript file
-**JavaScript type and construct**
+### JavaScript type and construct
 - variables declared using either _let_ or _const_ keyword (let allows change value of variable, const will give error if try change)
 - primitive types
   - Null	The type of a variable that has not been assigned a value.
@@ -281,7 +281,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - for in ... const obj = { a: 1, b: 'fish' }; for (const name in obj) {console.log(name);} // OUTPUT: a // OUTPUT: b
   - for of - iterates over an iterable's (array, map, set) property values
   - allow for either a _break_ or _continue_ statement to abort or advance the loop
-**JavaScript string**
+### JavaScript string
 - single quotes, double quotes, or backticks (`)
 - backtick defines string literal may contain JS that is evaluated in place and concatenated into the string
 - string literal replacement specifier declared with dollar sign followed by curly brace pair, anything inside {} evaluated as JS
@@ -292,14 +292,14 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - startsWith()	True if the string has a given prefix
   - endsWith()	True if the string has a given suffix
   - toLowerCase()	Converts all characters to lowercase
-**Functions**
+### Functions
 - can be assigned name, passed as parameter, returned as result, and referenced from an object like any other variable
 - if parameter not provided then value of parameter is _undefined_ when function executes
 - function can define default value, assinging value to parameter in function declaration
 - anonymous functions - functions commonly assigned to variable so can be passed as parameter to some other function or stored as object property, can define function anonymously and assign to a variable
 - creating, passing, and returning functions
 - functions can be declared inside other functions, allows you modularize code without always exposing private details
-**JavaScript arrow function**
+### JavaScript arrow function
 - make code more compact, syntax replaces need for _function_ keyword with symbols _=>_ placed after parameter declaration
 - arrow functions cannot be used for constructors or iterator generators
 - no curly braces, result of expression automatically returned
@@ -307,7 +307,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - arrow functions inherit _this_ pointer from scope where it is created, makes _closure_ allows function continue referencing its creation scope even after passed out of that scope
   - can remember values of variables when function created instead what they are when are executed
 - _debounce_ function only execute specified function once within given time window, any requests execute debounce function more frequently cause time window reset
-**JavaScript array**
+### JavaScript array
 - array objects represent sequence other objects and primitives
 - push	Add an item to the end of the array	a.push(4)
 - pop	Remove an item from the end of the array	x = a.pop()
@@ -321,14 +321,14 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - filter	Run a function to remove items	a.filter(i => i%2)
 - every	Run a function to test if all items match	a.every(i => i < 3)
 - some	Run a function to test if any items match	a.some(i => 1 < 1)
-**JSON**
+### JSON
 - JavaScript Object Notation
 - provide simple, effective way share and store data
 - easily convertible to and from JavaScript objects
 - most common JSON document contains object ({"a":1,"b":"words"})
 - can convert JSON to, and from, JS using _JSON.parse_ and _JSON.stringify_
 - JSON cannot represent JS undefined object so gets dropped when converting from JS to JSON
-**JavaScript object and classes**
+### JavaScript object and classes
 - objects have common object-oriented functionality such as constructors, a _this_ pointer, static properties and functions, and inheritance
 - preperties of object can be referenced either with dot (_obj.prop) or bracket notation (obj[' prop'])
 - declare variable of object type with _object-literal_ syntax, provide initial composition of object
@@ -345,12 +345,12 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - classes can be extended using _extends_ keyword to define inheritance
   - parameters that need be passed parent class delivered using _super_ function
   - parent's function explicitly accessed using _super_ keyword
-**JavaScript regular expressions**
+### JavaScript regular expressions
 - match, replace, search, split, test (see if match)
-**JavaScript rest and spread**
+### JavaScript rest and spread
 - call with any number of parameters and all automatically combined into an array use _rest_ parameter by prefix with three periods
 - spread opposite of rest, take object iterable (array or string) and expands into function's parameters
-**JavaScript exceptions**
+### JavaScript exceptions
 - try {
   // normal execution code
 } catch (err) {
@@ -358,7 +358,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 } finally {
   // always called code
 }
-**JavaScript destructuring**
+### JavaScript destructuring
 - process pulling individual items out of an existing one, or removing structure
 - arrays or objects
 - rest syntax ...others
@@ -366,7 +366,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
 - can map names to new variables instead using original property names
 - default values may be provided for missing ones
 - can use to reassign existing variables
-**Scope**
+### Scope
 - types scope
   - global - visible to all code
   - module - visible to all code running in a module
@@ -379,11 +379,11 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - Object - When this is referenced in an object it refers to the object.
 - closure defined function and surrounding state
 - whatever variables accessible when function created available inside function
-**JavaScript modules**
+### JavaScript modules
 - must explicitly _export_ objects from one file and then _import_ into another file
 **Document Object Model**
 **Local Storage**
-**Promises**
+### Promises
 - long running, or blocking tasks, should be executed with use of JS _Promise_
 - allows main rendering thread continue while some action executed in background
 - different states
@@ -397,7 +397,7 @@ GitHub is useful for saving work and seeing changes, if your computer dies the w
   - then called if promise fulfilled
   - catch called if promise rejected
   - finally always called after all processing completed
-**JavaScript Async/await**
+### JavaScript Async/await
 - _await_ keyword wraps execution of promise and removed need to chain functions, will block until promise state moves to fulfilled or throw exception if state moves rejected
 - cannot call await unless called at top level of JS, or in function defined with _async_ keyword
 - _async_ keyword transforms function so returns promise that will resolve to value that was previously returned by function, basically turns any function into asynchronous function so can in turn make asynchronous requests
